@@ -14,7 +14,7 @@ export default function Loader() {
   return (
     <div className="fixed inset-0 bg-black z-[999] flex items-center justify-center">
       <h1 className="text-2xl tracking-widest">
-        ATRIUM<span className="text-red-500">.</span>
+        GAAM<span className="text-red-500">.</span>
       </h1>
     </div>
   );
