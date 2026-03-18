@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import Loader from "@/components/ui/Loader";
+import { Analytics } from "@vercel/analytics/react";
 
 // Fuentes
 const inter = Inter({
@@ -51,6 +52,7 @@ export default function RootLayout({
       >
         <Loader />
         {children}
+        <Analytics />
 
         {/* Google Analytics */}
         <Script
