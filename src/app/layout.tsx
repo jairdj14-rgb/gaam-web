@@ -1,41 +1,23 @@
 import "./globals.css";
-import { Inter, Space_Grotesk } from "next/font/google";
-import Script from "next/script";
-import Loader from "@/components/ui/Loader";
 import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
 
-// Fuentes
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const space = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space",
-});
-
-// SEO + Metadata
-export const metadata = {
-  title: "GAAM Systems | IA, Automatización y Desarrollo Web",
+export const metadata: Metadata = {
+  title: "GAAM Systems | Sistemas para escalar negocios",
   description:
-    "Creamos sistemas, automatización con IA, desarrollo web y soluciones tecnológicas para escalar negocios.",
+    "Diseñamos sistemas inteligentes para automatizar procesos, optimizar operaciones y hacer crecer empresas.",
   keywords: [
     "automatización",
-    "inteligencia artificial",
     "desarrollo web",
-    "marketing digital",
-    "software",
+    "sistemas empresariales",
+    "tecnología negocios",
   ],
-  icons: {
-    icon: "/atrium.svg",
-  },
+  authors: [{ name: "GAAM Systems" }],
   openGraph: {
     title: "GAAM Systems",
-    description: "Soluciones tecnológicas para crecimiento empresarial",
-    url: "https://www.gaamsystems.com",
-    siteName: "GAAM",
-    locale: "es_MX",
+    description: "Sistemas inteligentes para empresas que quieren escalar.",
+    url: "https://gaamsystems.com",
+    siteName: "GAAM Systems",
     type: "website",
   },
 };
@@ -47,26 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body
-        className={`${inter.variable} ${space.variable} bg-black text-white`}
-      >
-        <Loader />
+      <body>
         {children}
         <Analytics />
-
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-K67MPRSMPE"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-K67MPRSMPE');
-          `}
-        </Script>
       </body>
     </html>
   );

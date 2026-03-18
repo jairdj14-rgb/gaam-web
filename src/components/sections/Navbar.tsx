@@ -18,7 +18,6 @@ export default function Navbar() {
         const el = document.getElementById(sections[i]);
         if (el) {
           const rect = el.getBoundingClientRect();
-
           if (rect.top <= 150) {
             setActive(sections[i]);
             break;
@@ -41,31 +40,26 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 smooth ${
-        scrolled
-          ? "bg-black/60 backdrop-blur-xl border-b border-white/10"
-          : "bg-transparent"
+        scrolled ? "bg-black/60 backdrop-blur-xl border-b border-white/10" : ""
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between">
         {/* LOGO */}
         <div className="text-lg font-semibold tracking-widest">
           GAAM<span className="text-red-500">.</span>
         </div>
 
-        {/* NAV */}
-        <nav className="hidden md:flex items-center gap-8 text-sm">
+        {/* LINKS */}
+        <nav className="hidden md:flex gap-8 text-sm">
           <Link href="#servicios" className={linkClass("servicios")}>
             Servicios
           </Link>
-
           <Link href="#proceso" className={linkClass("proceso")}>
             Proceso
           </Link>
-
           <Link href="#portafolio" className={linkClass("portafolio")}>
             Portafolio
           </Link>
-
           <Link href="#contacto" className={linkClass("contacto")}>
             Contacto
           </Link>
@@ -75,10 +69,10 @@ export default function Navbar() {
         <a
           href={contact.whatsappLink}
           target="_blank"
-          className="group relative border border-white/20 px-5 py-2 rounded-lg text-sm overflow-hidden smooth"
+          onClick={() => console.log("click whatsapp")}
+          className="border border-white/20 px-5 py-2 rounded-lg smooth"
         >
-          <span className="relative z-10">Contactar</span>
-          <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition" />
+          Contactar
         </a>
       </div>
     </header>
