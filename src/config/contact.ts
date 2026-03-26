@@ -1,5 +1,5 @@
 const baseMessage =
-  "Hola, vengo de tu página web y quiero información sobre tus servicios.";
+  "Hola, vengo de tu página web y quiero instalar el cotizador de WhatsApp.";
 
 export const contact = {
   phone: "5216241002876", // 👈 TU NÚMERO

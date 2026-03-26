@@ -1,7 +1,6 @@
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
-import Process from "@/components/sections/Process";
 import Portfolio from "@/components/sections/Portafolio";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
@@ -23,9 +22,6 @@ export default function Home() {
 
       {/* SERVICES */}
       <Services />
-
-      {/* PROCESO */}
-      <Process />
 
       {/* PORTAFOLIO */}
       <Portfolio />
