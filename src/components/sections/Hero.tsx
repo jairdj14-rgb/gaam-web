@@ -6,7 +6,6 @@ import Parallax from "@/components/ui/Parallax";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-black bg-grid">
-      {/* fondo sistema */}
       <div className="absolute inset-0 data-flow pointer-events-none" />
 
       <Parallax>
@@ -17,46 +16,40 @@ export default function Hero() {
           hover:shadow-[0_0_120px_rgba(255,255,255,0.08)]
           transition transform-gpu smooth"
         >
-          {/* HEADLINE */}
           <h1 className="text-4xl md:text-6xl font-semibold leading-[1.1] tracking-tight mb-6">
-            Diseñamos sistemas inteligentes para empresas que quieren escalar
+            Crea cotizaciones profesionales desde WhatsApp en menos de 1 minuto
           </h1>
 
-          {/* SUBCOPY (MEJORADO PARA CONVERSIÓN) */}
           <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-6 max-w-2xl">
-            Automatización, desarrollo e infraestructura tecnológica enfocada en
-            eficiencia y crecimiento real.
+            Escribe "hola", responde unas preguntas y recibe un PDF listo para
+            enviar a tu cliente.
           </p>
 
-          {/*  MENSAJE  */}
           <p className="text-gray-500 mb-10 max-w-xl">
-            No implementamos herramientas aisladas. Creamos sistemas completos
-            para hacer crecer tu negocio.
+            Ideal para plomeros, electricistas y técnicos que quieren cotizar
+            rápido y verse más profesionales.
           </p>
 
-          {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4">
-            {/* BOTÓN PRINCIPAL (MEJOR COPY) */}
             <a
               href={contact.whatsappLink}
               target="_blank"
-              onClick={() => console.log("click whatsapp")}
-              className="group relative bg-white text-black px-6 py-3 rounded-lg font-medium overflow-hidden smooth hover:scale-105 active:scale-95"
+              className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:scale-105 smooth"
             >
-              <span className="relative z-10">
-                Agenda una asesoría gratuita
-              </span>
-              <span className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition" />
+              Probar gratis ahora
             </a>
 
-            {/* BOTÓN SECUNDARIO */}
             <a
-              href="#servicios"
+              href="#como-funciona"
               className="border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10 smooth"
             >
-              Ver soluciones
+              Ver cómo funciona
             </a>
           </div>
+
+          <p className="text-sm text-gray-500 mt-4">
+            5 cotizaciones gratis al mes • Sin tarjeta
+          </p>
         </div>
       </Parallax>
     </section>

@@ -12,7 +12,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = ["servicios", "proceso", "portafolio", "contacto"];
+      const sections = ["beneficios", "como-funciona", "casos", "contacto"];
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
@@ -51,14 +51,14 @@ export default function Navbar() {
 
         {/* LINKS */}
         <nav className="hidden md:flex gap-8 text-sm">
-          <Link href="#servicios" className={linkClass("servicios")}>
-            Servicios
+          <Link href="#beneficios" className={linkClass("beneficios")}>
+            Beneficios
           </Link>
-          <Link href="#proceso" className={linkClass("proceso")}>
-            Proceso
+          <Link href="#como-funciona" className={linkClass("como-funciona")}>
+            Cómo funciona
           </Link>
-          <Link href="#portafolio" className={linkClass("portafolio")}>
-            Portafolio
+          <Link href="#casos" className={linkClass("casos")}>
+            Casos
           </Link>
           <Link href="#contacto" className={linkClass("contacto")}>
             Contacto
@@ -69,10 +69,9 @@ export default function Navbar() {
         <a
           href={contact.whatsappLink}
           target="_blank"
-          onClick={() => console.log("click whatsapp")}
-          className="border border-white/20 px-5 py-2 rounded-lg smooth"
+          className="bg-white text-black px-5 py-2 rounded-lg smooth hover:opacity-90"
         >
-          Contactar
+          Probar gratis
         </a>
       </div>
     </header>

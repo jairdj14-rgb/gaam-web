@@ -2,33 +2,40 @@
 
 import { useState } from "react";
 
-const projects = [
+const cases = [
   {
-    title: "Automatización empresarial",
-    short: "Optimización de procesos internos",
+    title: "Plomero independiente",
+    short: "Cotizaciones más rápidas y profesionales",
     full: {
-      problem: "Procesos manuales que consumían tiempo y generaban errores.",
+      problem:
+        "Perdía tiempo escribiendo cotizaciones manualmente y respondía tarde a clientes.",
       solution:
-        "Automatización de flujos internos con integraciones inteligentes.",
-      result: "Reducción de tiempos operativos en un 60%.",
+        "Implementó el cotizador automático por WhatsApp para generar PDFs en segundos.",
+      result:
+        "Ahora responde más rápido, se ve más profesional y cierra más trabajos.",
     },
   },
   {
-    title: "Plataforma web de clientes",
-    short: "Sistema de gestión digital",
+    title: "Técnico en aire acondicionado",
+    short: "Mejor seguimiento de clientes",
     full: {
-      problem: "Gestión manual de clientes y seguimiento ineficiente.",
-      solution: "Desarrollo de plataforma centralizada con control total.",
-      result: "Aumento en conversión y retención de clientes.",
+      problem:
+        "Clientes pedían precios pero no recibían respuesta clara o rápida.",
+      solution:
+        "Usa el sistema para generar cotizaciones estructuradas al instante.",
+      result:
+        "Aumentó su tasa de cierre al enviar cotizaciones claras y rápidas.",
     },
   },
   {
-    title: "Infraestructura corporativa",
-    short: "Red empresarial optimizada",
+    title: "Electricista",
+    short: "Más orden y menos esfuerzo",
     full: {
-      problem: "Red inestable y fallas constantes.",
-      solution: "Implementación de red estructurada profesional.",
-      result: "Operación continua sin interrupciones.",
+      problem:
+        "Cotizaciones desordenadas por mensaje y dificultad para mantener consistencia.",
+      solution: "Automatizó su proceso de cotización desde WhatsApp.",
+      result:
+        "Ahorra tiempo y proyecta una imagen más profesional ante sus clientes.",
     },
   },
 ];
@@ -38,7 +45,7 @@ export default function Portfolio() {
 
   return (
     <section
-      id="portafolio"
+      id="casos"
       className="relative py-32 px-6 bg-black bg-grid overflow-hidden"
     >
       <div className="absolute inset-0 data-flow pointer-events-none" />
@@ -47,43 +54,43 @@ export default function Portfolio() {
         {/* HEADER */}
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-semibold mb-4">
-            Casos reales
+            Casos reales de uso
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Resultados obtenidos a través de sistemas implementados.
+            Técnicos que ya están cotizando más rápido y cerrando más trabajos.
           </p>
         </div>
 
         {/* GRID */}
         <div className="grid md:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {cases.map((item, index) => (
             <div
-              key={project.title}
+              key={item.title}
               onClick={() => setActive(active === index ? null : index)}
               className="cursor-pointer group relative p-8 rounded-3xl backdrop-blur-xl border border-white/10 bg-white/5 smooth
               hover:scale-[1.02] hover:border-white/30
               hover:shadow-[0_0_80px_rgba(255,255,255,0.12)]"
             >
               <div className="relative z-10">
-                <h3 className="text-xl font-medium mb-2">{project.title}</h3>
+                <h3 className="text-xl font-medium mb-2">{item.title}</h3>
 
-                <p className="text-gray-400 text-sm mb-4">{project.short}</p>
+                <p className="text-gray-400 text-sm mb-4">{item.short}</p>
 
                 {active === index && (
                   <div className="text-sm text-gray-300 space-y-2">
                     <p>
                       <span className="text-white">Problema:</span>{" "}
-                      {project.full.problem}
+                      {item.full.problem}
                     </p>
 
                     <p>
                       <span className="text-white">Solución:</span>{" "}
-                      {project.full.solution}
+                      {item.full.solution}
                     </p>
 
                     <p>
                       <span className="text-white">Resultado:</span>{" "}
-                      {project.full.result}
+                      {item.full.result}
                     </p>
                   </div>
                 )}
