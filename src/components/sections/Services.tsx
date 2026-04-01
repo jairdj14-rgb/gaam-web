@@ -2,36 +2,41 @@
 
 export default function Services() {
   return (
-    <section id="beneficios" className="py-24 px-6">
+    <section className="py-24 px-6 bg-black">
       <div className="max-w-5xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-semibold mb-4">
-          Cotiza más rápido y cierra más trabajos
-        </h2>
+        <h2 className="text-4xl mb-4">Soluciones completas para tu empresa</h2>
 
         <p className="text-gray-400">
-          Diseñado para técnicos y servicios que venden por WhatsApp.
+          No solo automatizamos cotizaciones. Digitalizamos tu operación.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 gap-8">
         <div className="p-6 border border-white/10 rounded-2xl bg-white/5">
-          <h3 className="mb-2 font-medium">Cotizaciones en segundos</h3>
+          <h3>Automatización con WhatsApp</h3>
           <p className="text-gray-400 text-sm">
-            Genera PDFs profesionales automáticamente sin escribir todo manual.
+            Sistema de cotización automatizado con IA.
           </p>
         </div>
 
         <div className="p-6 border border-white/10 rounded-2xl bg-white/5">
-          <h3 className="mb-2 font-medium">Más profesional</h3>
+          <h3>Infraestructura de red</h3>
           <p className="text-gray-400 text-sm">
-            Envía cotizaciones bien presentadas que generan confianza.
+            Cableado, cámaras, APs y redes empresariales.
           </p>
         </div>
 
         <div className="p-6 border border-white/10 rounded-2xl bg-white/5">
-          <h3 className="mb-2 font-medium">Ahorra tiempo</h3>
+          <h3>Software a medida</h3>
           <p className="text-gray-400 text-sm">
-            Cotiza más rápido y enfócate en cerrar trabajos.
+            Sistemas internos para automatizar procesos.
+          </p>
+        </div>
+
+        <div className="p-6 border border-white/10 rounded-2xl bg-white/5">
+          <h3>Desarrollo web</h3>
+          <p className="text-gray-400 text-sm">
+            Sitios diseñados para generar clientes.
           </p>
         </div>
       </div>

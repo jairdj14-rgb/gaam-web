@@ -28,20 +28,23 @@ export default function ContactForm() {
   return (
     <section id="contacto" className="py-32 px-6 bg-black">
       <div className="max-w-xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-semibold mb-6">
-          Cuéntanos sobre tu proyecto
-        </h2>
+        <h2 className="text-3xl md:text-5xl mb-6">Hablemos de tu proyecto</h2>
 
         <p className="text-gray-400 mb-10">
-          Analizamos tu caso y te proponemos una solución clara.
+          Te proponemos una solución real para tu negocio.
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
-            type="text"
             name="name"
             placeholder="Nombre"
             required
+            className="p-3 rounded-lg bg-white/5 border border-white/10"
+          />
+
+          <input
+            name="empresa"
+            placeholder="Empresa"
             className="p-3 rounded-lg bg-white/5 border border-white/10"
           />
 
@@ -53,6 +56,16 @@ export default function ContactForm() {
             className="p-3 rounded-lg bg-white/5 border border-white/10"
           />
 
+          <select
+            name="presupuesto"
+            className="p-3 rounded-lg bg-white/5 border border-white/10"
+          >
+            <option>Presupuesto estimado</option>
+            <option>$5k - $10k</option>
+            <option>$10k - $50k</option>
+            <option>$50k+</option>
+          </select>
+
           <textarea
             name="message"
             placeholder="¿Qué necesitas?"
@@ -60,8 +73,8 @@ export default function ContactForm() {
             className="p-3 rounded-lg bg-white/5 border border-white/10"
           />
 
-          <button className="bg-white text-black py-3 rounded-lg font-medium smooth hover:scale-105">
-            Enviar mensaje
+          <button className="bg-white text-black py-3 rounded-lg">
+            Solicitar asesoría
           </button>
         </form>
 
