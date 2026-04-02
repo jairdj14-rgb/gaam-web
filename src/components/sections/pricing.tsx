@@ -3,46 +3,30 @@ import { contact } from "@/config/contact";
 export default function Pricing() {
   return (
     <section id="planes" className="py-32 px-6 text-center bg-black">
-      <p className="text-green-400 text-sm mb-2">Empieza gratis. Sin riesgo.</p>
+      <p className="text-green-400 mb-2">Pensado para técnicos en campo</p>
 
-      <h2 className="text-4xl mb-4">
-        Escala cuando empieces a cerrar más trabajos
+      <h2 className="text-4xl mb-12">
+        Empieza gratis. Escala cuando cierres más trabajos
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12">
-        {/* FREE */}
-        <div className="p-8 border border-white/10 rounded-2xl bg-white/5">
+      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="p-8 bg-white/5 border border-white/10 rounded-2xl">
           <h3>Free</h3>
-          <p className="text-3xl">$0</p>
+          <p>$0</p>
           <p className="text-gray-400">5 cotizaciones</p>
-
-          <a href={contact.whatsappLink} className="underline">
-            Probar gratis
-          </a>
+          <a href={contact.whatsappLink}>Probar en obra</a>
         </div>
 
-        {/* BASIC */}
-        <div className="p-8 border border-white/10 rounded-2xl bg-white/5">
+        <div className="p-8 bg-white/5 border border-white/10 rounded-2xl">
           <h3>Basic</h3>
-          <p className="text-3xl">$299 MXN</p>
-
-          <a href={contact.whatsappLink} className="underline">
-            Empezar
-          </a>
+          <p>$299 MXN</p>
+          <a href={contact.whatsappLink}>Uso diario</a>
         </div>
 
-        {/* PRO */}
-        <div className="p-8 bg-white text-black rounded-2xl scale-105 border-4 border-green-400 relative">
-          <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs bg-green-400 px-3 py-1 rounded-full">
-            MÁS USADO
-          </span>
-
+        <div className="p-8 bg-white text-black rounded-2xl scale-105 border-4 border-green-400">
           <h3>PRO</h3>
-          <p className="text-3xl">$999 MXN</p>
-
-          <a href={contact.whatsappLink} className="font-semibold underline">
-            Escalar mi negocio
-          </a>
+          <p>$999 MXN</p>
+          <a href={contact.whatsappLink}>Escalar mi negocio</a>
         </div>
       </div>
     </section>
