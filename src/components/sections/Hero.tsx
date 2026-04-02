@@ -1,13 +1,58 @@
 "use client";
 
 import { contact } from "@/config/contact";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+  const [step, setStep] = useState(0);
+  const [liveCount, setLiveCount] = useState(3);
+  const [secondsAgo, setSecondsAgo] = useState(5);
+
+  // LOOP DEMO
+  useEffect(() => {
+    const flow = setInterval(() => {
+      setStep((prev) => (prev >= 3 ? 0 : prev + 1));
+    }, 1800);
+
+    return () => clearInterval(flow);
+  }, []);
+
+  // FOMO USERS
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLiveCount((prev) => {
+        const change = Math.random() > 0.5 ? 1 : -1;
+        let next = prev + change;
+        if (next < 2) next = 2;
+        if (next > 7) next = 7;
+        return next;
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // TIMER PDF
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSecondsAgo((prev) => (prev > 15 ? 3 : prev + 1));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 bg-black text-center">
-      <div className="max-w-4xl">
-        <p className="text-green-400 text-sm mb-2">
-          ⚡ Cotizaciones en menos de 2 minutos
+    <section className="relative min-h-screen flex items-center justify-center px-6 bg-black overflow-hidden text-center">
+      {/* GRID */}
+      <div className="absolute inset-0 opacity-20 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+
+      {/* GLOW */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_60%)]" />
+
+      <div className="relative max-w-4xl z-10">
+        {/* 🔴 FOMO LIVE */}
+        <p className="text-xs text-green-400 mb-2 animate-pulse">
+          {liveCount} técnicos están cotizando ahora mismo
         </p>
 
         <h1 className="text-4xl md:text-6xl font-semibold mb-6">
@@ -18,10 +63,11 @@ export default function Hero() {
           Genera cotizaciones profesionales desde WhatsApp sin esfuerzo manual.
         </p>
 
-        <p className="text-red-400 text-sm mb-4">
+        <p className="text-red-400 text-sm mb-6">
           El cliente no espera. Elige al que responde primero.
         </p>
 
+        {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href={contact.whatsappLink}
@@ -43,12 +89,39 @@ export default function Hero() {
           Más de 100 técnicos ya cotizan más rápido
         </p>
 
-        {/* DEMO VISUAL */}
-        <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/10 text-left">
-          <p className="text-sm text-gray-400 mb-2">Ejemplo real:</p>
-          <p>Servicio: Instalación CCTV</p>
-          <p>Total: $4,500 MXN</p>
-          <p className="text-green-400">PDF generado en 12 segundos</p>
+        {/* 💬 DEMO VIVO */}
+        <div className="mt-12 max-w-md mx-auto text-left space-y-3">
+          {/* CLIENTE */}
+          <div className="bg-white/5 border border-white/10 p-3 rounded-xl">
+            <p className="text-sm">¿Cuánto cuesta instalar cámaras?</p>
+          </div>
+
+          {/* ESCRIBIENDO */}
+          {step === 1 && (
+            <div className="bg-white/10 border border-white/20 p-3 rounded-xl">
+              <p className="text-sm text-gray-400 animate-pulse">
+                Escribiendo...
+              </p>
+            </div>
+          )}
+
+          {/* CALCULANDO */}
+          {step === 2 && (
+            <div className="bg-white/10 border border-white/20 p-3 rounded-xl">
+              <p className="text-sm text-gray-300">Generando cotización...</p>
+            </div>
+          )}
+
+          {/* RESULTADO */}
+          {step >= 3 && (
+            <div className="bg-white text-black p-4 rounded-xl">
+              <p className="text-sm font-medium">Instalación CCTV</p>
+              <p className="text-sm">$4,500 MXN</p>
+              <p className="text-green-600 text-xs mt-1">
+                PDF generado hace {secondsAgo}s
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>
