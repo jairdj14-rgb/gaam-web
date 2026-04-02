@@ -3,9 +3,10 @@ import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cotizador por WhatsApp | Genera cotizaciones en segundos",
+  title:
+    "Cotizador por WhatsApp para técnicos | Automatiza y cierra más clientes",
   description:
-    "Crea cotizaciones profesionales desde WhatsApp en segundos. Ideal para plomeros, electricistas y técnicos que quieren cerrar más trabajos.",
+    "Genera cotizaciones profesionales en minutos desde WhatsApp. Automatiza tu proceso, responde más rápido y cierra más trabajos.",
   keywords: [
     "cotizador whatsapp",
     "generar cotizaciones pdf",
@@ -14,6 +15,12 @@ export const metadata: Metadata = {
     "quote generator whatsapp",
     "contractor quote tool",
     "whatsapp quoting tool",
+    "wifi",
+    "smarthouse",
+    "cctv",
+    "survillance cameras",
+    "soporte tecnico especializado",
+    "cableado estructurado",
   ],
   authors: [{ name: "GAAM Systems" }],
 

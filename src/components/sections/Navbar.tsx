@@ -60,7 +60,7 @@ export default function Navbar() {
           target="_blank"
           className="bg-white text-black px-5 py-2 rounded-lg font-medium"
         >
-          Probar demo
+          Cotizar ahora
         </a>
       </div>
     </header>
