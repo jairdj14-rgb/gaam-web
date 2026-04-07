@@ -28,6 +28,7 @@ export default function FAQ() {
               ¿Qué pasa cuando se acaban mis cotizaciones?
             </h3>
             <p>Puedes escalar de plan en cualquier momento.</p>
+            <p>Si refieres también ganas.</p>
           </div>
         </div>
       </div>

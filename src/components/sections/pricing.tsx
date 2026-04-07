@@ -12,7 +12,8 @@ export default function Pricing() {
         <div className="p-8 bg-white/5 border border-white/10 rounded-2xl">
           <h3 className="text-xl mb-2">FREE</h3>
           <p className="text-3xl mb-4">$0</p>
-          <p className="text-gray-400 mb-6">5 cotizaciones</p>
+          <p className="text-gray-400 mb-6">3 cotizaciones</p>
+          <p className="text-sm mb-6">Refiere compañeros y gana cotizaciones</p>
 
           <a
             href={contact.whatsappLink}

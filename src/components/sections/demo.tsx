@@ -9,7 +9,7 @@ export default function Demo() {
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="p-6 rounded-2xl border border-white/10 bg-white/5 text-left">
           <p className="text-gray-400 text-sm">Cliente:</p>
-          <p>“¿Cuánto cuesta instalar cámaras?”</p>
+          <p>“¿Me puedes mandar la cotización?”</p>
         </div>
 
         <div className="p-6 rounded-2xl border border-white/10 bg-white/5 text-left">
