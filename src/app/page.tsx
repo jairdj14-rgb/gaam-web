@@ -17,7 +17,6 @@ import CursorGlow from "@/components/ui/CursorGlow";
 export default function Home() {
   return (
     <main className="bg-black text-white min-h-screen">
-      <CursorGlow />
       <Navbar />
 
       <Hero />
@@ -26,14 +25,12 @@ export default function Home() {
       <Demo />
       <Benefits />
       <Pricing />
-      <Portfolio />
-      <Testimonials />
-      <Services />
       <CTA />
-      <FAQ />
-      <ContactForm />
 
-      <WhatsAppButton />
+      {/* SECONDARY */}
+      <Services />
+
+      <FAQ />
     </main>
   );
 }

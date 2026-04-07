@@ -1,3 +1,4 @@
+import { contact } from "@/config/contact";
 export default function FAQ() {
   return (
     <section className="py-24 px-6 bg-black">

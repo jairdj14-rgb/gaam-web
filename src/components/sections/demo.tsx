@@ -1,3 +1,4 @@
+import { contact } from "@/config/contact";
 export default function Demo() {
   return (
     <section className="py-32 px-6 bg-black text-center">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { contact } from "@/config/contact";
 
 export default function ContactForm() {
   const [status, setStatus] = useState("");

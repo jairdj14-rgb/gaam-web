@@ -1,3 +1,4 @@
+import { contact } from "@/config/contact";
 export default function HowItWorks() {
   return (
     <section id="como-funciona" className="py-24 px-6 bg-black">

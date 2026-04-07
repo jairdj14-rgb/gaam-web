@@ -3,18 +3,16 @@ import { contact } from "@/config/contact";
 export default function CTA() {
   return (
     <section className="py-32 px-6 text-center bg-black">
-      <h2 className="text-4xl mb-6">Cotiza antes de salir del lugar</h2>
-
-      <p className="text-gray-400 mb-6">
-        Cada trabajo que no cotizas al momento es dinero perdido.
-      </p>
+      <h2 className="text-4xl mb-6">
+        Cada cotización que no envías al momento es dinero perdido
+      </h2>
 
       <a
         href={contact.whatsappLink}
         target="_blank"
-        className="bg-white text-black px-8 py-4 rounded-lg"
+        className="bg-green-500 text-black px-8 py-4 rounded-lg font-medium"
       >
-        Cotizar ahora desde mi celular
+        Probar GRATIS ahora en WhatsApp
       </a>
     </section>
   );

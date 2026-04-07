@@ -1,44 +1,35 @@
-"use client";
-
 export default function Services() {
   return (
-    <section className="py-24 px-6 bg-black">
-      <div className="max-w-5xl mx-auto text-center mb-16">
-        <h2 className="text-4xl mb-4">Soluciones completas para tu empresa</h2>
+    <section className="py-24 px-6 bg-black border-t border-white/10">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl mb-4">
+          ¿Quieres automatizar más áreas de tu negocio?
+        </h2>
 
-        <p className="text-gray-400">
-          No solo automatizamos cotizaciones. Digitalizamos tu operación.
+        <p className="text-gray-400 mb-10">
+          También desarrollamos sistemas personalizados y automatizaciones para
+          empresas.
         </p>
-      </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        <div className="p-6 border border-white/10 rounded-2xl bg-white/5">
-          <h3>Automatización con WhatsApp</h3>
-          <p className="text-gray-400 text-sm">
-            Sistema de cotización automatizado con IA.
-          </p>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="p-6 border border-white/10 rounded-2xl bg-white/5">
+            <h3 className="mb-2">Automatización de procesos</h3>
+            <p className="text-sm text-gray-400">
+              WhatsApp, ventas, seguimiento y operaciones.
+            </p>
+          </div>
+
+          <div className="p-6 border border-white/10 rounded-2xl bg-white/5">
+            <h3 className="mb-2">Sistemas personalizados</h3>
+            <p className="text-sm text-gray-400">
+              Software adaptado a tu negocio.
+            </p>
+          </div>
         </div>
 
-        <div className="p-6 border border-white/10 rounded-2xl bg-white/5">
-          <h3>Infraestructura de red</h3>
-          <p className="text-gray-400 text-sm">
-            Cableado, cámaras, APs y redes empresariales.
-          </p>
-        </div>
-
-        <div className="p-6 border border-white/10 rounded-2xl bg-white/5">
-          <h3>Software a medida</h3>
-          <p className="text-gray-400 text-sm">
-            Sistemas internos para automatizar procesos.
-          </p>
-        </div>
-
-        <div className="p-6 border border-white/10 rounded-2xl bg-white/5">
-          <h3>Desarrollo web</h3>
-          <p className="text-gray-400 text-sm">
-            Sitios diseñados para generar clientes.
-          </p>
-        </div>
+        <p className="text-sm text-gray-500 mt-6">
+          (Esto es aparte del cotizador automático)
+        </p>
       </div>
     </section>
   );
