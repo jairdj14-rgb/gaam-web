@@ -26,7 +26,7 @@ export default function Pricing() {
         {/* PRO */}
         <div className="p-8 bg-white text-black rounded-2xl scale-105">
           <h3 className="text-xl mb-2">PRO</h3>
-          <p className="text-3xl mb-4">$149 MXN / mes</p>
+          <p className="text-3xl mb-4">$144 MXN / mes</p>
 
           <p className="mb-2">Cotizaciones ilimitadas</p>
           <p className="text-sm mb-6">Cancela cuando quieras</p>
